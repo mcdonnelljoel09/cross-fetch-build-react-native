@@ -538,8 +538,8 @@ var irrelevant = (function (exports) {
   return exports;
 
 }({}));
-delete fetch.polyfill
 })(__self__);
+delete __self__.fetch.polyfill;
 // Choose between native implementation (global) or custom implementation (__self__)
 var ctx = global.fetch ? global : __self__;
 exports = ctx.fetch // To enable: import fetch from 'cross-fetch'
